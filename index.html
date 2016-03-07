@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data-binding</title>
+	<style>
+	.black {
+		background: black;
+		color: white;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="app">
+		<p data-binding="name|innerText"></p>
+		<p data-binding="name|innerText:price"></p>
+		<p data-binding="name|class|black">Quando o input ter valor, mudará de cor</p>
+
+		<div>
+			<textarea data-binding="name|value"></textarea>
+			<textarea data-binding="valor|value"></textarea>
+		</div>
+
+		<div>
+			<input type="text" name="name" id="name" data-binding-target="name">
+			<input type="text" name="valor" id="valor" data-binding-target="valor">
+		</div>
+	</div>
+	
+	<script src="data-binding.js"></script>
+</body>
+</html>
